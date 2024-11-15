@@ -1,4 +1,30 @@
 .DS_Store
-.ipynb_checkpoints/
 .idea/
 data/fraud-detection/*.csv
+
+# python .gitignore
+# Byte-compiled files
+**/__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Distribution / packaging
+.Python
+build/
+dist/
+*.egg-info/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
