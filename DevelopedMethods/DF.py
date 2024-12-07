@@ -1,7 +1,21 @@
 from imports import * # import np, pd, sklearn fn's
 
 # df = pd.read_csv('../data/fraud-detection/fraudTrain.csv') # or use kaggle notebook path: /kaggle/input/fraud-detection/fraudTrain.csv
-df = pd.read_csv('~/Desktop/CS4661_Project/data/fraud-detection/fraudTrain.csv') # or use kaggle notebook path: /kaggle/input/fraud-detection/fraudTrain.csv
+df_train = pd.read_csv('~/Desktop/CS4661_Project/data/fraud-detection/fraudTrain.csv') # or use kaggle notebook path: /kaggle/input/fraud-detection/fraudTrain.csv
+df_test = pd.read_csv('~/Desktop/CS4661_Project/data/fraud-detection/fraudTest.csv') # or use kaggle notebook path: /kaggle/input/fraud-detection/fraudTrain.csv
+
+# track indices of each dataset so we can later separate them back into df_train, df_test after modifying (encoding, feature drops, etc.)
+df_train['source'] = 'train'
+df_test['source'] = 'test'
+
+# make df entire dataset (train+test)
+df = pd.concat([df_train, df_test], axis=0, ignore_index=True)  # axis=0 means row-wise concatenation
+
+def resplit_train_test(df): # df -> train_df & test_df with original indices
+    df_train = df[df['source'] == 'train'].drop(columns='source').reset_index(drop=True)
+    df_test = df[df['source'] == 'test'].drop(columns='source').reset_index(drop=True)
+    df.drop(['source'], axis=1, inplace=True)
+    return df, df_train, df_test
 
 # df attributes:
 # ['T', 'abs', 'add', 'add_prefix', 'add_suffix', 'agg', 'aggregate', 'align', 'all',
