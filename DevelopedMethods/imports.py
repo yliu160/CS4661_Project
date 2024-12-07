@@ -8,9 +8,8 @@ from sklearn.preprocessing import StandardScaler # normalize features
 from sklearn import linear_model # LogisticRegression LinearRegression
 from sklearn import metrics # accuracy score
 from sklearn.pipeline import make_pipeline
-
 import matplotlib.pyplot as plt
-# %matplotlib inline
+import seaborn as sns
 
 # defaults
 pd.set_option('display.max_columns', None) # don't limit # columns shown

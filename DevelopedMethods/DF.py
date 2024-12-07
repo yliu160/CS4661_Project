@@ -1,8 +1,9 @@
 from imports import * # import np, pd, sklearn fn's
 
-# df = pd.read_csv('../data/fraud-detection/fraudTrain.csv') # or use kaggle notebook path: /kaggle/input/fraud-detection/fraudTrain.csv
-df_train = pd.read_csv('~/Desktop/CS4661_Project/data/fraud-detection/fraudTrain.csv') # or use kaggle notebook path: /kaggle/input/fraud-detection/fraudTrain.csv
-df_test = pd.read_csv('~/Desktop/CS4661_Project/data/fraud-detection/fraudTest.csv') # or use kaggle notebook path: /kaggle/input/fraud-detection/fraudTrain.csv
+# df_train = pd.read_csv('../data/fraud-detection/fraudTrain.csv') # <--- relative path only works if u ran: /opt/anaconda3/bin/jupyter_mac.command  @  project root
+# df_test = pd.read_csv('../data/fraud-detection/fraudTest.csv') # <--- relative path only works if u ran: /opt/anaconda3/bin/jupyter_mac.command  @  project root
+df_train = pd.read_csv('~/Desktop/CS4661_Project/data/fraud-detection/fraudTrain.csv') # hardcoded. can also use kaggle notebook path: /kaggle/input/fraud-detection/fraudTrain.csv (if using online kaggle notebook)
+df_test = pd.read_csv('~/Desktop/CS4661_Project/data/fraud-detection/fraudTest.csv') # hardcoded. can also use kaggle notebook path: /kaggle/input/fraud-detection/fraudTrain.csv (if using online kaggle notebook)
 
 # track indices of each dataset so we can later separate them back into df_train, df_test after modifying (encoding, feature drops, etc.)
 df_train['source'] = 'train'
