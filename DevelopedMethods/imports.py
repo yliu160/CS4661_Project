@@ -5,7 +5,7 @@ import numpy as np
 from sklearn.neighbors import KNeighborsClassifier # knn algo
 from sklearn.tree import DecisionTreeClassifier
 from sklearn import linear_model # LogisticRegression LinearRegression
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier, IsolationForest
 from sklearn.cluster import KMeans # K-means Clustering
 from sklearn.naive_bayes import GaussianNB # naive bayes
 
