@@ -7,6 +7,7 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn import linear_model # LogisticRegression LinearRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.cluster import KMeans # K-means Clustering
+from sklearn.naive_bayes import GaussianNB # naive bayes
 
 # sklearn misc.
 from sklearn.preprocessing import StandardScaler, LabelEncoder        # StandardScaler = normalize features             ——LabelEncoder =  Label Encoding (convert value into unique int) - good for ft. w/ many unique values (to not create many dummy columns)
