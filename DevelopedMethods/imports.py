@@ -14,6 +14,7 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder        # Standard
 from sklearn import metrics                                           # accuracy score
 from sklearn.model_selection import cross_val_score, train_test_split # cross_val_score = average(repeatedly split dataset into training/testing, .fit(), accuracy_score(.predict())         ——train_test_split example:   X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=x)
 from sklearn.pipeline import make_pipeline                            #
+from sklearn.datasets import make_blobs
 
 # plotting
 import matplotlib.pyplot as plt                                       # matplotlib. (graphs/plots)
