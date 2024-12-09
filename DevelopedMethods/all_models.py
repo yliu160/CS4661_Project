@@ -218,6 +218,8 @@ nb_pca_fpr, nb_pca_tpr, nb_pca_thresholds = metrics.roc_curve(y_test_balanced, g
 #Calculating Area Under Curve
 nb_pca_AUC = metrics.auc(nb_pca_fpr, nb_pca_tpr)
 
+print("Naive Bayes done")
+
 """Random Forest.ipynb"""
 #Instantiating RandomForestClassifier object
 ccfd_randomforest = RandomForestClassifier(n_estimators = 19, bootstrap = True, random_state = 7)
@@ -260,3 +262,5 @@ rf_pca_fpr, rf_pca_tpr, rf_pca_thresholds = metrics.roc_curve(y_test_balanced, r
 
 #Calculating Area Under Curve
 rf_pca_AUC = metrics.auc(rf_pca_fpr, rf_pca_tpr)
+
+print("Random Forest done")
